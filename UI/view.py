@@ -30,7 +30,8 @@ class View(ft.UserControl):
         self.dd_pd = ft.Dropdown(label = "Periodo didattico",
                                  hint_text = "Selezionare il periodo didattico",
                                  options = [ft.dropdown.Option(key = "1"), ft.dropdown.Option(key = "2")],
-                                 width = 200)
+                                 width = 200,
+                                 on_change = self._controller.leggi_tendina)
         self.btn_corsi_periodo = ft.ElevatedButton(text = "Corsi del periodo didattico",
                                                    tooltip = "Ottenere i corsi del periodo didattico selezionato",
                                                    on_click = self._controller.get_corsi_periodo)
